@@ -1,0 +1,254 @@
+<html>
+<head>
+    <title>a</title>
+    <style>
+        textarea {
+            width: 400px;
+            height: 600px;
+        }
+
+        iframe{
+            width: 400px;
+            height:400px;
+        }
+    </style>
+</head>
+<body>
+<h1> cross domain </h1>
+<h2>a page</h2>
+ <!--
+    style rule -> div ->key array ->sort
+    a : { margin:1; padding:2}
+    .b : {padding:2}
+ -->
+<textarea id="sourceCss">
+    fieldset
+    { margin: 0; padding: 0; border:1px solid;}
+    var
+    { list-style-type: none; }
+</textarea>
+
+<textarea contentEditable id="outputCss">
+
+</textarea>
+<textarea contentEditable id="sortTableArea">
+    {"sort-order":[["font","font-family","font-size","font-weight","font-style","font-variant","font-size-adjust","font-stretch","font-effect","font-emphasize","font-emphasize-position","font-emphasize-style","font-smooth","line-height"],["position","z-index","top","right","bottom","left"],["display","visibility","float","clear","overflow","overflow-x","overflow-y","-ms-overflow-x","-ms-overflow-y","clip","zoom","flex-direction","flex-order","flex-pack","flex-align"],["-webkit-box-sizing","-moz-box-sizing","box-sizing","width","min-width","max-width","height","min-height","max-height","margin","margin-top","margin-right","margin-bottom","margin-left","padding","padding-top","padding-right","padding-bottom","padding-left"],["table-layout","empty-cells","caption-side","border-spacing","border-collapse","list-style","list-style-position","list-style-type","list-style-image"],["content","quotes","counter-reset","counter-increment","resize","cursor","-webkit-user-select","-moz-user-select","-ms-user-select","user-select","nav-index","nav-up","nav-right","nav-down","nav-left","-webkit-transition","-moz-transition","-ms-transition","-o-transition","transition","-webkit-transition-delay","-moz-transition-delay","-ms-transition-delay","-o-transition-delay","transition-delay","-webkit-transition-timing-function","-moz-transition-timing-function","-ms-transition-timing-function","-o-transition-timing-function","transition-timing-function","-webkit-transition-duration","-moz-transition-duration","-ms-transition-duration","-o-transition-duration","transition-duration","-webkit-transition-property","-moz-transition-property","-ms-transition-property","-o-transition-property","transition-property","-webkit-transform","-moz-transform","-ms-transform","-o-transform","transform","-webkit-transform-origin","-moz-transform-origin","-ms-transform-origin","-o-transform-origin","transform-origin","-webkit-animation","-moz-animation","-ms-animation","-o-animation","animation","-webkit-animation-name","-moz-animation-name","-ms-animation-name","-o-animation-name","animation-name","-webkit-animation-duration","-moz-animation-duration","-ms-animation-duration","-o-animation-duration","animation-duration","-webkit-animation-play-state","-moz-animation-play-state","-ms-animation-play-state","-o-animation-play-state","animation-play-state","-webkit-animation-timing-function","-moz-animation-timing-function","-ms-animation-timing-function","-o-animation-timing-function","animation-timing-function","-webkit-animation-delay","-moz-animation-delay","-ms-animation-delay","-o-animation-delay","animation-delay","-webkit-animation-iteration-count","-moz-animation-iteration-count","-ms-animation-iteration-count","-o-animation-iteration-count","animation-iteration-count","-webkit-animation-direction","-moz-animation-direction","-ms-animation-direction","-o-animation-direction","animation-direction","text-align","-webkit-text-align-last","-moz-text-align-last","-ms-text-align-last","text-align-last","vertical-align","white-space","text-decoration","text-emphasis","text-emphasis-color","text-emphasis-style","text-emphasis-position","text-indent","-ms-text-justify","text-justify","letter-spacing","word-spacing","-ms-writing-mode","text-outline","text-transform","text-wrap","text-overflow","-ms-text-overflow","text-overflow-ellipsis","text-overflow-mode","-ms-word-wrap","word-wrap","word-break","-ms-word-break","-moz-tab-size","-o-tab-size","tab-size","-webkit-hyphens","-moz-hyphens","hyphens","pointer-events"],["opacity","filter:progid:DXImageTransform.Microsoft.Alpha(Opacity","-ms-filter:\\'progid:DXImageTransform.Microsoft.Alpha","-ms-interpolation-mode","color","border","border-width","border-style","border-color","border-top","border-top-width","border-top-style","border-top-color","border-right","border-right-width","border-right-style","border-right-color","border-bottom","border-bottom-width","border-bottom-style","border-bottom-color","border-left","border-left-width","border-left-style","border-left-color","-webkit-border-radius","-moz-border-radius","border-radius","-webkit-border-top-left-radius","-moz-border-radius-topleft","border-top-left-radius","-webkit-border-top-right-radius","-moz-border-radius-topright","border-top-right-radius","-webkit-border-bottom-right-radius","-moz-border-radius-bottomright","border-bottom-right-radius","-webkit-border-bottom-left-radius","-moz-border-radius-bottomleft","border-bottom-left-radius","-webkit-border-image","-moz-border-image","-o-border-image","border-image","-webkit-border-image-source","-moz-border-image-source","-o-border-image-source","border-image-source","-webkit-border-image-slice","-moz-border-image-slice","-o-border-image-slice","border-image-slice","-webkit-border-image-width","-moz-border-image-width","-o-border-image-width","border-image-width","-webkit-border-image-outset","-moz-border-image-outset","-o-border-image-outset","border-image-outset","-webkit-border-image-repeat","-moz-border-image-repeat","-o-border-image-repeat","border-image-repeat","outline","outline-width","outline-style","outline-color","outline-offset","background","filter:progid:DXImageTransform.Microsoft.AlphaImageLoader","background-color","background-image","background-repeat","background-attachment","background-position","background-position-x","-ms-background-position-x","background-position-y","-ms-background-position-y","-webkit-background-clip","-moz-background-clip","background-clip","background-origin","-webkit-background-size","-moz-background-size","-o-background-size","background-size","box-decoration-break","-webkit-box-shadow","-moz-box-shadow","box-shadow","filter:progid:DXImageTransform.Microsoft.gradient","-ms-filter:\\'progid:DXImageTransform.Microsoft.gradient","text-shadow"]]}
+</textarea>
+<button id="sortBtn">sort</button>
+<button id="oneLine">oneLine</button>
+<button id="mulLine">mulLine</button>
+<button id="compressBtn">compress</button>
+<script>
+    /*
+    * 功能：
+    *  1: 根据提供的属性key权重，排序 样式规则
+    *  2:  单多行样式规则 0：单行 1：多行
+    *  3： 形如 a, b, c 的 单多行
+    *  4： 属性里面的注释 集合一块
+    * */
+
+    var formateStyleRute = function(str, options){
+        /*
+         *@des: formate style sheet
+         * str: css style sheet text value
+         * */
+        var output ;
+        var sortTable = options.sortTable;
+        var ruleValue = '\\}?([\\s\\S]*?)\\{([\\s\\S]*?)\\}'; //{}
+        var rWhiteSpace = '[\\t\\r\\n\\f\\x20]';
+        var rAttrUnitKey = '([\\w-]+)\\s*:';
+
+        options = options ? options : {
+            attrLineStyle:1 //* 0: oneline, 1: multiLine*//*
+        } ;
+
+        var sortFn = function( a, b ){
+            /*
+             * sort key  order
+             * */
+            var sortByAlphabet = function(a, b){
+                var result = 0,
+                        i = 0;
+                if(a == b) {
+                    return result;
+                }
+                while( true ){
+                    //alphabet sort
+                    if( a.charAt( i ) > b.charAt( i ) ){
+                        result = 1;break;
+                    }
+                    if( a.charAt( i ) < b.charAt( i ) ){
+                        result = -1;
+                        break;
+                    }
+                    ++i;
+                }
+                return result;
+            } ;
+
+            var sortBySortTable = function(a, b){
+                var aPrior = sortTable[ a.trim() ];
+                var bPrior = sortTable[ b.trim() ];
+                return aPrior - bPrior;
+            }
+            return sortTable ? sortBySortTable( a, b ) : sortByAlphabet( a, b);
+        }
+
+        /* var options = {
+         attrLineStyle:1 *//* 0: oneline, 1: multiLine*//*
+         };*/ //setting
+        var sortAttribute = function(str) {
+            /*
+             *@des: sort attribute  unit
+             * @param:
+             * str: attribute units text value
+             * */
+            var result;
+            var rWhiteSpaceAfterComma = /\s*:\s*/g;
+            var rOneLine = '\\n+';
+            var rMulLine = '\;(?!\n)';
+            //str = /\{([\s\S]*?)\}/ig.exec(str)[1];
+            var attrUnit = str.split(';');
+            var lastVal = attrUnit.slice(-1)[0];
+            /^\s*$/.test( lastVal ) &&  attrUnit.pop();
+
+            attrUnit.sort(function( a, b ){
+                var aKey = new RegExp(rAttrUnitKey, 'i').exec( a )[ 1 ];
+                var bKey = new RegExp(rAttrUnitKey, 'i').exec( b )[ 1 ];
+                var result = sortFn( aKey, bKey );
+                return result;
+            })
+            options.attrLineStyle == 1 && ( /\n(?=[\s\S])/gi.test(attrUnit[0]) ||  (attrUnit[0] = '\n'.concat( attrUnit[0] ) ) );
+            result =  '{' + attrUnit.join(';') + ';}';
+            options.attrLineStyle == 0 && (result =  result.replace( new RegExp(rOneLine, 'gi'), ''));
+            options.attrLineStyle == 1 && (result = result.replace( new RegExp(rMulLine, 'gi'), ';\n'));
+            return result.replace(rWhiteSpaceAfterComma, ':')
+        } ;
+
+        /*
+         * @des: slice comment
+         * @param:
+         * str: style rule value
+         * */
+        var sliceComment = function(str){
+            var rComment = /(\/\*[\s\S]*?\*\/)/gi;
+            var comments =[];
+            var unComments, commentsText, isExistComments ;
+
+            unComments =  str.replace(rComment, function(matched){
+                comments.push(matched);
+                return '';
+            });
+
+            isExistComments = comments.length;
+            commentsText = isExistComments ?
+                    (options.attrLineStyle == 0 && comments.join('')+'}' ) || (options.attrLineStyle == 1 && comments.join('\n') + '\n}' ) || ''
+                    : '';
+            return {unComments: unComments, commentsText:commentsText, isExistComments:isExistComments};
+        } ;
+
+        /*
+         * @des: formate style rule key
+         * @param
+         * ruleKey :
+         * */
+        var formateRuleKey = function(ruleKey){
+            var rDotWrapedSpace = '\\,' + rWhiteSpace + '*';
+            options.attrLineStyle == 0 && ( ruleKey = ruleKey.replace( new RegExp( rDotWrapedSpace, 'gi'), ',') );
+            options.attrLineStyle == 1 && ( ruleKey = ruleKey.replace( new RegExp( rDotWrapedSpace, 'gi'), ',\n') );
+            ruleKey = ruleKey.replace( new RegExp(  rWhiteSpace +'*$', 'gi'), '');
+            return ruleKey;
+        };
+
+        output = str.replace(new RegExp( ruleValue, 'gi'), function( str, ruleKey, ruleValue ){
+            var sliceObj = sliceComment(ruleValue);
+            var sortedAttr = sortAttribute(sliceObj['unComments']);
+            var commentsText = sliceObj['commentsText'];
+            var isExistComments = sliceObj['isExistComments'];
+            var formatedRuleKey = formateRuleKey( ruleKey );
+            var trimWhiteSpace = function(str){
+                return str.replace(/[\t\x20]*/gi, '');
+            }
+
+            var addWHiteSpaceAfterSemicolon = function( str ){
+                return str.replace(/;/gi, '; ');
+            }
+
+            var result = isExistComments ? sortedAttr.replace(/\}/, commentsText) : sortedAttr;
+            options.attrLineStyle ==0 &&  ( result = trimWhiteSpace(result), result = addWHiteSpaceAfterSemicolon(result) );
+            return formatedRuleKey + result;
+        });
+        return output;
+    }
+
+    var compress = function(str){
+        var rWhiteSpace = '[\\t\\r\\n\\f\\x20]';
+        var rRedundant = rWhiteSpace + '*\\\/\\*[\\s\\S]*?\\*\\/' + rWhiteSpace +'*|' + rWhiteSpace + '*([,:;\\{\\}])' + rWhiteSpace + '*|(' + rWhiteSpace + '){2,}';
+        return str.replace( new RegExp( rRedundant, 'gi' ), function(str, matchedPunctuation, matchedWhiteSpace){
+               if( matchedPunctuation ) return matchedPunctuation;
+               if( matchedWhiteSpace ) return matchedWhiteSpace;
+                return '';
+        });
+    }
+
+    var setOuputCss = function(str) {
+        var output = document.getElementById('outputCss');
+        output.value = str;
+    }
+
+    //application
+    var btn = document.getElementById('sortBtn') ;
+    var oneLineBtn = document.getElementById('oneLine') ;
+    var mulLineBtn = document.getElementById('mulLine') ;
+    var sortTableArea = document.getElementById('sortTableArea') ;
+    var compressBtn = document.getElementById('compressBtn') ;
+
+    var getPriorityMap = function(str){
+        var json = JSON.parse(str);
+        var sortOrder = json['sort-order'];
+        var setPriority = function( arr ){
+            var self = arguments.callee;
+            self.prior = self.prior || 0;
+            self.result =self.result || {};
+            arr.forEach(function( value){
+               if(Array.isArray(value) ){
+                   self( value );
+               } else {
+                   self.result[value] = self.prior++;
+               }
+            });
+        }
+
+        setPriority( sortOrder );
+        return setPriority.result;
+    }
+
+    var options = {
+        attrLineStyle:1,/* 0: oneline, 1: multiLine*/
+        sortTable: getPriorityMap(sortTableArea.value)
+    };
+    btn.addEventListener('click', function(){
+        var source = document.getElementById('sourceCss');
+
+        var result = formateStyleRute(source.value, options);
+        setOuputCss( result );
+    });
+
+    oneLineBtn.addEventListener('click',function(){
+        options.attrLineStyle = 0;
+        btn.click();
+    })
+
+    mulLineBtn.addEventListener('click',function(){
+        options.attrLineStyle = 1;
+        btn.click();
+    })
+
+    compressBtn.addEventListener('click', function(){
+        var source = document.getElementById('sourceCss');
+        var result = compress(source.value);
+        setOuputCss( result );
+    })
+</script>
+</body>
+</html>
